@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  -webkit-tap-highlight-color: black;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/* * Remove the border on images inside links in IE 10 */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+input {
+  display: block;
+}
+
+body {
+  font-family: 'Space Grotesk', serif;
+  font-weight: 500;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+}
+
+.left {}
+
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+.container {
+  min-width: 320px;
+  margin-bottom: 200px;
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-item {
+  max-width: 350px;
+}
+
+.form-item label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-item input {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid hsl(270, 3%, 87%);
+
+}
+
+.card-date {
+  display: flex;
+  align-items: center;
+}
+
+.card-date .small {
+  width: 60px;
+}
+
+.cvc {
+  margin-left: auto
+}
+
+.cvc input {
+  width: 150px;
+}
+
+.btn {
+  margin-top: 40px;
+  padding: 12px;
+
+  min-width: 350px;
+
+  font-size: 16px;
+  background-color: hsl(278, 68%, 11%);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sucsess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.sucsess img {
+  width: 80px;
+  height: 80px;
+}
+
+.sucsess h1 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.sucsess p {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: hsl(279, 6%, 55%)
+}
+
+.sucsess .info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.card-front {
+  position: absolute;
+  padding: 30px;
+  top: 100px;
+  left: 100px;
+
+  background: url(./images/bg-card-front.png) no-repeat center/cover;
+
+  width: 400px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card-front-logo img {
+  width: 80px;
+}
+
+.card-number {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.card-front-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-front-logo {
+  margin-bottom: 50px;
+}
+
+.card-back {
+  position: absolute;
+  top: 400px;
+  left: 180px;
+  width: 400px;
+  height: 222px;
+  padding: 30px;
+  border-radius: 10px;
+  background: url(./images/bg-card-back.png) no-repeat center/cover;
+  color: #fff;
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+.card-back-cvc {
+
+  position: absolute;
+  top: 100px;
+  right: 55px;
+
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+
+input:focus {
+  border: 1px solid hsl(249, 99%, 64%);
+}
+
+.btn:focus {
+  border: 4px solid hsl(249, 99%, 64%);
+}
