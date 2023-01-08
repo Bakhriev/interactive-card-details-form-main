@@ -39,7 +39,7 @@
 				<div class="container">
 					<div class="sucsess hidden">
 						<div class="logo">
-							<img src="./images/icon-complete.svg" alt="congratulations" />
+							<img src="./images/icon-complete.svg" alt="complete" />
 						</div>
 						<div class="info">
 							<h1>THANK YOU!</h1>
@@ -57,7 +57,7 @@
 									placeholder="e.g. Jane Applessed"
 									autocomplete="off"
 									maxlength="16"
-									onkeypress="return event.charCode >= 65 && event.charCode <= 122 "
+									onkeypress="return (event.charCode >= 65 && event.charCode <= 122) || (event.key == ' ')"
 								/>
 							</div>
 						</div>
@@ -71,7 +71,7 @@
 									placeholder="e.g. 1234 5678 9123 0000"
 									autocomplete="off"
 									onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-									maxlength="16"
+									maxlength="19"
 								/>
 							</div>
 						</div>

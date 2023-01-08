@@ -23,20 +23,32 @@ btn.addEventListener("click", e => {
 inputCardNumber.addEventListener("input", e => {
 	if (!e.target.value) {
 		cardNumber.innerHTML = "9591 6489 6389 1011"
-	} else if (e.target.value.length > 12) {
-		cardNumber.innerHTML = e.target.value.replace(
-			/(\d{4})(\d{4})(\d{4})(\d{0,4})/,
-			"$1 $2 $3 $4"
-		)
-	} else if (e.target.value.length > 8) {
-		cardNumber.innerHTML = e.target.value.replace(
-			/(\d{4})(\d{4})(\d{0,4})/,
-			"$1 $2 $3"
-		)
-	} else if (e.target.value.length > 4) {
-		cardNumber.innerHTML = e.target.value.replace(/(\d{4})(\d{0,4})/, "$1 $2")
 	} else {
-		cardNumber.innerHTML = e.target.value
+		const valueOfInput = e.target.value.replaceAll(" ", "")
+		if (e.target.value.length > 14) {
+			e.target.value = valueOfInput.replace(
+				/(\d{4})(\d{4})(\d{4})(\d{0,4})/,
+				"$1 $2 $3 $4"
+			)
+			cardNumber.innerHTML = valueOfInput.replace(
+				/(\d{4})(\d{4})(\d{4})(\d{0,4})/,
+				"$1 $2 $3 $4"
+			)
+		} else if (e.target.value.length > 9) {
+			e.target.value = valueOfInput.replace(
+				/(\d{4})(\d{4})(\d{0,4})/,
+				"$1 $2 $3"
+			)
+			cardNumber.innerHTML = valueOfInput.replace(
+				/(\d{4})(\d{4})(\d{0,4})/,
+				"$1 $2 $3"
+			)
+		} else if (e.target.value.length > 4) {
+			e.target.value = valueOfInput.replace(/(\d{4})(\d{0,4})/, "$1 $2")
+			cardNumber.innerHTML = valueOfInput.replace(/(\d{4})(\d{0,4})/, "$1 $2")
+		} else {
+			cardNumber.innerHTML = e.target.value
+		}
 	}
 })
 
